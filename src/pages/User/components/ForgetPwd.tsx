@@ -8,13 +8,14 @@ import { POST_API_FORGET_PASSWORD } from '../../../../types';
  * @param props
  * @returns
  */
+
 export default function ForgetPwd(props: any) {
   const [form] = ProForm.useForm();
   const intl = useIntl();
   const handleSubmit = async (values: POST_API_FORGET_PASSWORD) => {
     try {
       const newValues = { ...values, type: 'resetPassword' };
-      const userInfo = await getUserInfo(newValues);
+      const userInfo = await PutUserInfo(newValues);
       console.log(userInfo);
     } catch (error) {
       console.log(error);
