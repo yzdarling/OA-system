@@ -22,11 +22,22 @@ declare namespace API {
     address?: string;
     phone?: string;
   };
-
+  /** 登录参数类型 */
   type LoginResult = {
     status?: string;
     type?: string;
     currentAuthority?: string;
+  };
+  /** 重置密码参数类型 */
+  type ResetResult = {
+    username?: string;
+    password?: string;
+    newPassword?: string;
+  };
+
+  type ResetParams = {
+    status?: string;
+    message?: string;
   };
 
   type PageParams = {
