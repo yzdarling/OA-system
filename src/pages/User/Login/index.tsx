@@ -1,4 +1,3 @@
-import { Footer } from '@/components';
 import { login } from '@/services/ant-design-pro/api';
 import { getFakeCaptcha } from '@/services/ant-design-pro/login';
 import { LockOutlined, MobileOutlined, UserOutlined } from '@ant-design/icons';
@@ -72,7 +71,6 @@ const Login: React.FC = () => {
         history.push(urlParams.get('redirect') || '/');
         return;
       }
-      console.log(msg);
       // 如果失败去设置用户错误信息
       setUserLoginState(msg);
     } catch (error) {
@@ -309,7 +307,6 @@ const Login: React.FC = () => {
           </div>
         </LoginForm>
       </div>
-      <Footer />
     </div>
   );
 };
