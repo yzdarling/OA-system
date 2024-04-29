@@ -6,7 +6,8 @@ export default {
   'pages.login.success': '登录成功！',
   'pages.login.username.placeholder': '用户名: admin or user',
   'pages.login.username.required': '用户名是必填项！',
-  'pages.login.password.placeholder': '密码: ant.design',
+  'pages.login.password.placeholder': '密码:ant.design',
+  'pages.login.newPassword.placeholder': '新密码',
   'pages.login.password.required': '密码是必填项！',
   'pages.login.phoneLogin.tab': '手机号登录',
   'pages.login.phoneLogin.errorMessage': '验证码错误',
@@ -64,4 +65,6 @@ export default {
   'pages.searchTable.tenThousand': '万',
   'pages.searchTable.batchDeletion': '批量删除',
   'pages.searchTable.batchApproval': '批量审批',
+  'pages.reset.success': '修改成功',
+  'pages.reset.failure': '修改失败',
 };
