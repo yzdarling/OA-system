@@ -15,7 +15,6 @@ import { request } from '@umijs/max';
 
 /** 获取当前的用户 GET /api/currentUser */
 export async function currentUser(options?: { [key: string]: any }) {
-  console.log(options);
   return request<{
     data: API.CurrentUser;
   }>('/api/currentUserInfo', {
@@ -53,6 +52,16 @@ export async function login(body: API.LoginParams, options?: { [key: string]: an
     },
     data: body,
     ...(options || {}),
+  });
+}
+/** 修改密码 POST /api/reset/userpwd*/
+export async function updateUserInfo(body: API.ResetResult) {
+  return request<API.ResetParams>('/api/reset/password', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    data: body,
   });
 }
 
