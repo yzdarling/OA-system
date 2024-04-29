@@ -118,12 +118,3 @@ export namespace API {
     currentAuthority: string;
   };
 }
-
-/**
- * 重置密码
- */
-export type POST_API_FORGET_PASSWORD = {
-  username: string;
-  password: string;
-  type: string;
-};
