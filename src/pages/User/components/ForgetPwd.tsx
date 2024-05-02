@@ -35,96 +35,107 @@ export default function ForgetPwd(props: any) {
   };
 
   return (
-    <ProForm
-      form={form}
-      style={{ marginTop: 62 }}
-      size="large"
-      submitter={{
-        searchConfig: {
-          resetText: '重置',
-          submitText: '提交',
-        },
-        submitButtonProps: {
-          type: 'primary',
-          style: {
-            width: '100%',
-            marginTop: 24,
+    <>
+      <ProForm
+        form={form}
+        style={{ marginTop: 62 }}
+        size="large"
+        submitter={{
+          searchConfig: {
+            resetText: '重置',
+            submitText: '提交',
           },
-        },
-        resetButtonProps: {
-          style: { display: 'none' },
-        },
-      }}
-      onFinish={async (values) => await handleSubmit(values as API.ResetResult)}
-    >
-      {contextHolder}
-
-      <ProFormText
-        name="username"
-        fieldProps={{
-          size: 'large',
-          prefix: <UserOutlined />,
+          submitButtonProps: {
+            type: 'primary',
+            style: {
+              width: '100%',
+              marginTop: 24,
+            },
+          },
+          resetButtonProps: {
+            style: { display: 'none' },
+          },
         }}
-        placeholder={intl.formatMessage({
-          id: 'pages.login.username.placeholder',
-          defaultMessage: '用户名',
-        })}
-        rules={[
-          {
-            required: true,
-            message: (
-              <FormattedMessage id="pages.login.username.required" defaultMessage="请输入用户名!" />
-            ),
-          },
-        ]}
-      />
-
-      <ProFormText.Password
-        name="password"
-        fieldProps={{
-          size: 'large',
-          prefix: <LockOutlined />,
-        }}
-        placeholder={intl.formatMessage({
-          id: 'pages.login.password.placeholder',
-          defaultMessage: '密码',
-        })}
-        rules={[
-          {
-            required: true,
-            message: (
-              <FormattedMessage id="pages.login.password.required" defaultMessage="请输入旧密码!" />
-            ),
-          },
-        ]}
-      />
-
-      <ProFormText.Password
-        name="newPassword"
-        fieldProps={{
-          size: 'large',
-          prefix: <LockOutlined />,
-        }}
-        placeholder={intl.formatMessage({
-          id: 'pages.login.newPassword.placeholder',
-          defaultMessage: '新密码',
-        })}
-        rules={[
-          {
-            required: true,
-            message: (
-              <FormattedMessage id="pages.login.password.required" defaultMessage="请输入新密码!" />
-            ),
-          },
-        ]}
-      />
-
-      <span
-        style={{ cursor: 'pointer', color: 'blue' }}
-        onClick={() => props?.handleClickType('account')}
+        onFinish={async (values) => await handleSubmit(values as API.ResetResult)}
       >
-        返回登陆页面
-      </span>
-    </ProForm>
+        {contextHolder}
+
+        <ProFormText
+          name="username"
+          fieldProps={{
+            size: 'large',
+            prefix: <UserOutlined />,
+          }}
+          placeholder={intl.formatMessage({
+            id: 'pages.login.username.placeholder',
+            defaultMessage: '用户名',
+          })}
+          rules={[
+            {
+              required: true,
+              message: (
+                <FormattedMessage
+                  id="pages.login.username.required"
+                  defaultMessage="请输入用户名!"
+                />
+              ),
+            },
+          ]}
+        />
+
+        <ProFormText.Password
+          name="password"
+          fieldProps={{
+            size: 'large',
+            prefix: <LockOutlined />,
+          }}
+          placeholder={intl.formatMessage({
+            id: 'pages.login.password.placeholder',
+            defaultMessage: '密码',
+          })}
+          rules={[
+            {
+              required: true,
+              message: (
+                <FormattedMessage
+                  id="pages.login.password.required"
+                  defaultMessage="请输入旧密码!"
+                />
+              ),
+            },
+          ]}
+        />
+
+        <ProFormText.Password
+          name="newPassword"
+          fieldProps={{
+            size: 'large',
+            prefix: <LockOutlined />,
+          }}
+          placeholder={intl.formatMessage({
+            id: 'pages.login.newPassword.placeholder',
+            defaultMessage: '新密码',
+          })}
+          rules={[
+            {
+              required: true,
+              message: (
+                <FormattedMessage
+                  id="pages.login.password.required"
+                  defaultMessage="请输入新密码!"
+                />
+              ),
+            },
+          ]}
+        />
+
+        <span
+          style={{ cursor: 'pointer', color: 'blue' }}
+          onClick={() => props?.handleClickType('account')}
+        >
+          返回登陆页面
+        </span>
+      </ProForm>
+    </>
   );
 }
