@@ -41,6 +41,46 @@ declare namespace API {
     message?: string;
   };
 
+  /** 员工分析数据参数类型 */
+
+  type AnalyzeStaffParams = {
+    data?: AnalyzeStaffData;
+    success?: boolean;
+  };
+  /**员工数据参数类型 */
+  type AnalyzeStaffData = {
+    ageMap?: PieData[];
+    constellationList?: PieData[];
+    wordingYearsMaps?: WordingYears[];
+    total?: number;
+    onbocrdingTimeData?: Onbocrding;
+    marriageList?: PieData[];
+    genderList?: PieData[];
+    educationList?: PieData[];
+    departmentList?: CloumnData[];
+  };
+  /**饼图参数类型 */
+  type PieData = {
+    name?: string;
+    value?: number;
+  };
+  /**柱状图参数类型 */
+  type CloumnData = {
+    type?: string;
+    value?: number;
+  };
+
+  /**工作年龄类型定义 */
+  type Onbocrding = {
+    one?: number;
+    two?: number;
+    three?: number;
+  };
+  /**老员工类型定义 */
+  type WordingYears = {
+    userName?: string;
+    department?: string;
+  };
   type PageParams = {
     current?: number;
     pageSize?: number;
