@@ -65,6 +65,17 @@ export async function updateUserInfo(body: API.ResetResult) {
   });
 }
 
+/** 获取员工分析数据 GET /api/analyzeStaff */
+export async function analyzeStaff(options?: { [key: string]: any }) {
+  return request<API.AnalyzeStaffParams>('/api/analyzeStaff', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    ...(options || {}),
+  });
+}
+
 /** 此处后端没有提供注释 GET /api/notices */
 export async function getNotices(options?: { [key: string]: any }) {
   return request<API.NoticeIconList>('/api/notices', {
