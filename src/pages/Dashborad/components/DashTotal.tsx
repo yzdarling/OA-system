@@ -2,7 +2,7 @@ import React from 'react';
 import { ProCard } from '@ant-design/pro-components';
 
 type PropsTypes = {
-  total: number;
+  total?: number;
 };
 export default function DashTotal(props: PropsTypes) {
   return (

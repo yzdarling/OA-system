@@ -1,16 +1,16 @@
 import React from 'react';
 import { ProCard } from '@ant-design/pro-components';
 type Amount = {
-  title: string;
-  amount: number;
-  id: number;
+  title?: string;
+  amount?: number;
+  id?: number;
 };
 
 type PropsTypes = {
-  amountDataList: Amount[];
+  amountDataList?: Amount[];
 };
 export default function DashSeniority(props: PropsTypes) {
-  const amountRender = props?.amountDataList.map((amount: Amount) => (
+  const amountRender = props?.amountDataList?.map((amount: Amount) => (
     <ProCard
       key={amount?.id}
       layout="center"

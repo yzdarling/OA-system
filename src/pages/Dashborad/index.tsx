@@ -32,6 +32,7 @@ export default function DashBorad() {
         <DashTatal total={total} />
       </div>
       <div>
+        {' '}
         <DashSeniority amountDataList={amountDataList} />
       </div>
       <div>

@@ -4,9 +4,9 @@ import { Bar } from '@ant-design/charts';
 import PieList from '@/components/Echarts/PieList';
 
 type PropsTypes = {
-  genderPie: API.PieData[];
-  marriageList: API.PieData[];
-  total: number;
+  genderPie?: API.PieData[];
+  marriageList?: API.PieData[];
+  total?: number;
 };
 export default function DashAgeAndMarriage(props: PropsTypes) {
   const config = {

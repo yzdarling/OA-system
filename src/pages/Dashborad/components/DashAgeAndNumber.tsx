@@ -3,8 +3,8 @@ import { ProCard } from '@ant-design/pro-components';
 import ColumnList from '@/components/Echarts/ColumnList';
 
 type PropsTypes = {
-  ageMap: API.PieData[];
-  departmentList: API.CloumnData[];
+  ageMap?: API.PieData[];
+  departmentList?: API.CloumnData[];
 };
 export default function DashAgeAndNumber(props: PropsTypes) {
   return (

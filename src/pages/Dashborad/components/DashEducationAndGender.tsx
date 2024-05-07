@@ -2,16 +2,16 @@ import React from 'react';
 import { ProCard } from '@ant-design/pro-components';
 import PieList from '@/components/Echarts/PieList';
 
-interface PieData {
-  name: string;
-  value: number;
-}
+type PieData = {
+  name?: string;
+  value?: number;
+};
 
-interface PropsTypes {
-  educationPie: PieData[];
-  genderPie: PieData[];
-  total: number;
-}
+type PropsTypes = {
+  educationPie?: PieData[];
+  genderPie?: PieData[];
+  total?: number;
+};
 export default function DashEducationAndGender(props: PropsTypes) {
   return (
     <ProCard key="DashEducationAndGender" ghost={true} gutter={6} style={{ marginBlockStart: 16 }}>
